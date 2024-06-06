@@ -11,12 +11,13 @@
     "dev": "vite --open",
     "start": "vite --open --host",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx,js,jsx",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
     "lintfix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
-    "format": "prettier *.{ts,tsx,js,jsx} --write",
-    "formatcheck": "prettier *.{ts,tsx,js,jsx} --check",
+    "format": "prettier \"src/**/*.{ts,tsx,js,jsx}\" --write",
+    "formatcheck": "prettier \"src/**/*.{ts,tsx,js,jsx}\" --check",
     "stylelint": "stylelint \"src/**/*.{scss,css}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -34,6 +35,8 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.5",
     "postcss": "^8.4.38",
     "prettier": "^3.3.1",
     "sass": "^1.77.4",
@@ -41,5 +44,12 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{scss,css}": "stylelint",
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint"
+    ]
   }
 }
