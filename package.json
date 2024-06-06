@@ -14,7 +14,8 @@
     "lint": "eslint . --ext ts,tsx,js,jsx",
     "lintfix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier *.{ts,tsx,js,jsx} --write",
-    "formatcheck": "prettier *.{ts,tsx,js,jsx,html} --check",
+    "formatcheck": "prettier *.{ts,tsx,js,jsx} --check",
+    "stylelint": "stylelint \"src/**/*.{scss,css}\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -33,7 +34,11 @@
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
     "prettier": "^3.3.1",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
