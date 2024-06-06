@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Countries
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🔧 Technologies used
 
-Currently, two official plugins are available:
+- JavaScript library: [React](https://reactjs.org/)
+- Build tool: [Vite](https://vitejs.dev/)
+- Code linting: [ESLint](https://eslint.org/)
+- Package manager: [pnpm](https://pnpm.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🚀 Getting started
 
-## Expanding the ESLint configuration
+[![Node.js Version](https://img.shields.io/badge/node-v20.11.1-339933?logo=nodedotjs)](https://nodejs.org/)
+[![pnpm Version](https://img.shields.io/badge/pnpm-v9.2.0-F69220?logo=pnpm)](https://www.npmjs.com/package/pnpm/v/9.2.0)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🎈 Start the project
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+# Install dependencies
+pnpm i
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# Run in the development mode
+pnpm dev
+
+# To make the development server accessible on a different device, run
+pnpm start
+
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
