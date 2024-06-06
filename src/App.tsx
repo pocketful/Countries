@@ -1,5 +1,7 @@
+import CountriesPage from './components/CountriesPage/CountriesPage'
+
 const App = () => {
-  return <p>Countries</p>
+  return <CountriesPage />
 }
 
 export default App
