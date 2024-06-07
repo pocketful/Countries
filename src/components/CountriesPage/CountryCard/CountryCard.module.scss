@@ -1,0 +1,23 @@
+@import '/src/styles/colors';
+@import '/src/styles/typography';
+
+.card {
+  background-color: rgba($accent-color, 0.6);
+  border-radius: 4px;
+  padding: 0.6em 1.6em;
+  margin: 1em 0;
+  letter-spacing: initial;
+
+  .name {
+    font-weight: $weight-bold;
+  }
+
+  .region {
+    color: $grey-color;
+  }
+
+  .area {
+    color: $white-color;
+    font-weight: $weight-bold;
+  }
+}

@@ -2,6 +2,7 @@ import Filter from './Filter/Filter'
 import style from './CountriesPage.module.scss'
 import useLoadCountries from './hooks/useLoadCountries'
 import { useState } from 'react'
+import CountryCard from './CountryCard/CountryCard'
 
 const CountriesPage = () => {
   const [activeFilters, setActiveFilters] = useState({ sort: '', filter: '' })
@@ -41,14 +42,7 @@ const CountriesPage = () => {
         onFilterOceania={filterOceaniaHandler}
         activeFilters={activeFilters}
       />
-      {countries?.map((country, idx) => (
-        <div key={idx}>
-          <p>{country.name}</p>
-          <p>{country.region}</p>
-          <p>{country.areaSize}</p>
-          <br />
-        </div>
-      ))}
+      <div>{countries?.map((country, idx) => <CountryCard key={idx} {...country} />)}</div>
       {error && <p className={style.error}>{error}</p>}
       {loading && <p>Loading...</p>}
     </>
