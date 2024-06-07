@@ -1,0 +1,16 @@
+@import '/src/styles/media-queries';
+@import '/src/styles/sizes';
+@import '/src/styles/colors';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba($primary-color, 0.6);
+  margin-bottom: 0.7em;
+  border-radius: 4px;
+
+  .sort,
+  .filter {
+    display: flex;
+  }
+}
