@@ -1,0 +1,15 @@
+@import '/src/styles/media-queries';
+@import '/src/styles/sizes';
+
+.container {
+  margin: 0 auto;
+  max-width: $container-max-w;
+  padding-left: $container-pd-l;
+  padding-right: $container-pd-l;
+  padding-top: $container-pd-s;
+
+  @include for(ScreenS) {
+    padding-left: $container-pd-s;
+    padding-right: $container-pd-s;
+  }
+}
