@@ -1,0 +1,14 @@
+@import './sizes';
+
+// media queries for screen sizes
+@mixin for($size) {
+  @if $size == ScreenS {
+    @media (max-width: $screen-s) {
+      @content;
+    }
+  } @else if $size == ScreenL {
+    @media (max-width: $screen-l) {
+      @content;
+    }
+  }
+}
