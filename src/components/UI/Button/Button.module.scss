@@ -1,0 +1,26 @@
+@import '/src/styles/colors';
+@import '/src/styles/typography';
+
+.button {
+  color: $white-color;
+  background: $secondary-color;
+  font-weight: $weight-bolder;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 1rem;
+  margin: 0.6em;
+
+  &:hover:not(&--active) {
+    background-color: $tertiary-color;
+    transition: 0.2s;
+  }
+
+  &--active {
+    background-color: $accent-color;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: rgba($accent-color, 0.6);
+    }
+  }
+}
