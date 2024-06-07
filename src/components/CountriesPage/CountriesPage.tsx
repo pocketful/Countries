@@ -1,35 +1,30 @@
 import Filter from './Filter/Filter'
 import style from './CountriesPage.module.scss'
 import useLoadCountries from './hooks/useLoadCountries'
-import { useState } from 'react'
 import CountryCard from './CountryCard/CountryCard'
 
 const CountriesPage = () => {
-  const [activeFilters, setActiveFilters] = useState({ sort: '', filter: '' })
-
-  const { loading, error, countries } = useLoadCountries()
+  const { loading, error, countries, activeFilters, setActiveFilters } = useLoadCountries()
 
   const sortByNameHandler = () => {
-    console.log('sortByNameHandler')
     setActiveFilters((prevFilters) => ({
       ...prevFilters,
       sort: 'ByName',
+      sortOrder: prevFilters.sortOrder === 'asc' ? 'desc' : 'asc',
     }))
   }
 
   const filterSmallerThanLTHandler = () => {
-    console.log('filterSmallerThanLTHandler')
     setActiveFilters((prevFilters) => ({
       ...prevFilters,
-      sort: 'Smaller',
+      filter: 'Smaller',
     }))
   }
 
   const filterOceaniaHandler = () => {
-    console.log('filterOceaniaHandler')
     setActiveFilters((prevFilters) => ({
       ...prevFilters,
-      sort: 'Oceania',
+      filter: 'Oceania',
     }))
   }
 

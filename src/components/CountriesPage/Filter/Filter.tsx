@@ -1,13 +1,9 @@
+import { Filters } from '../../../types/types'
 import Button from '../../UI/Button/Button'
 import style from './Filter.module.scss'
 
-type activeFilters = {
-  filter: string
-  sort: string
-}
-
 type Props = {
-  activeFilters: activeFilters
+  activeFilters: Filters
   onSortByName: () => void
   onFilterSmallerThanLT: () => void
   onFilterOceania: () => void
